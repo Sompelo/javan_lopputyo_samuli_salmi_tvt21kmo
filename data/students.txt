@@ -1,0 +1,5 @@
+{"studentId" : 1, "studentName" : "testi1", "studentEmail" : "testi1", "studentGroup" : "testi1"}
+{"studentId" : 2, "studentName" : "testi2", "studentEmail" : "testi2", "studentGroup" : "testi2"}
+{"studentId" : 3, "studentName" : "testi3", "studentEmail" : "testi3", "studentGroup" : "testi3"}
+{"studentId" : 4, "studentName" : "asd", "studentEmail" : "asd", "studentGroup" : "asd"}
+{"studentId" : 5, "studentName" : "sdf", "studentEmail" : "sdf", "studentGroup" : "sdf"}

@@ -1,0 +1,89 @@
+html {
+  width: 100%;
+}
+
+body {
+  background-image: linear-gradient(
+    to right,
+    rgb(39, 39, 151),
+    rgb(123, 168, 55)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0 0 5px black;
+}
+
+.titles {
+  display: flex;
+  flex-direction: row;
+}
+
+.titles > label {
+  padding: 10px;
+  font-size: large;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0 0 5px black;
+}
+
+.containercontainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  border: 5px;
+  background-color: rgba(255, 255, 255, 0.171);
+}
+.container {
+  display: grid;
+  justify-content: center;
+  align-content: top;
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: repeat(3, auto);
+}
+.container2 {
+  display: grid;
+  justify-content: center;
+  align-content: top;
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: repeat(3, auto);
+}
+.formTopLeft {
+  margin: 5%;
+}
+.formBotLeft {
+  margin: 5%;
+}
+.formTopRight {
+  margin: 5%;
+}
+.formBotRight {
+  margin: 5%;
+}
+
+#ulLeft {
+  grid-row: span 2;
+  align-items: center;
+}
+
+.formTopLeft2 {
+  margin: 5%;
+}
+.formBotLeft2 {
+  margin: 5%;
+}
+.formTopRight2 {
+  margin: 5%;
+}
+.formBotRight2 {
+  margin: 5%;
+}
+
+#ulRight {
+  grid-row: span 2;
+  align-items: center;
+}

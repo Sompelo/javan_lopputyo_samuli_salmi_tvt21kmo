@@ -1,0 +1,6 @@
+{"courseId" : 1, "courseName" : "asd", "courseTeacher" : "asd"}
+{"courseId" : 2, "courseName" : "xcv", "courseTeacher" : "xcv"}
+{"courseId" : 3, "courseName" : "dfg", "courseTeacher" : "dfg"}
+{"courseId" : 4, "courseName" : "qwe", "courseTeacher" : "qwe"}
+{"courseId" : 5, "courseName" : "sdf", "courseTeacher" : "sdf"}
+{"courseId" : 6, "courseName" : "ert", "courseTeacher" : "ert"}

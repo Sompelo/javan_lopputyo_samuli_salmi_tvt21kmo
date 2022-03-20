@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sompelo</title>
+        <link rel="stylesheet" href="/css/index.css">
+        <script src="code.js" defer></script>
+    </head>
+    <body>
+        <h1>Oppilastietoäppi</h1>
+        <div class="titles">
+            <label>Add a student to database </label>                       <!--Otsikkodivi-->
+            <label>Add a course to database </label>
+            <label>Add a Course to a student </label>
+            <label>Enroll a student on a course </label>
+        </div>
+        <div class="containercontainer">                                    <!--Parent container divi, sisältää 2 lapsidiviä: container ja container2-->
+            
+            <div class="container">
+                <div class="formTopLeft">
+                    <form id="myStudentForm">
+                        
+                        <label>Student name</label><br>                     <!--Formi oppilaan lisäämiselle "tietokantaan"-->
+                        <input id="sname" type="text" name="studentName"><br>
+                        <label>Student email</label><br>
+                        <input id="semail" type="text" name="studentEmail"><br>
+                        <label>Student group</label><br>
+                        <input id="sgroup" type="text" name="studentGroup"><br><br>
+                        <button id="addStudent">Add Student</button><button id="getStudents">Get Students</button><br>
+                        
+                    </form>
+                </div>
+                <div class="formTopRight"> 
+                    <form id="myCourseForm">
+                        
+                        <label>Course name</label><br>                      <!--Formi kurssin lisäämiselle "tietokantaan"-->
+                        <input id="cname" type="text" name="courseName"><br>
+                        <label>Teacher</label><br>
+                        <input id="cteach" type="text" name="courseTeacher"><br><br>
+                        <button id="addCourse">Add Course</button><button id="getCourses">Get Courses</button>
+                        <br><br>
+                    </form> 
+                </div>
+                <div class="formBotLeft">                                   <!--Formi oppilaan hakemiseen "tietokannasta" id-numeron perusteella-->
+                    <form id="myGetStudentByIdForm">
+                        <label>Search for student by id</label><br>
+                        <input id="stdid" type="number" name="studentId"><br><br>
+                        <button id="getStudentById">Get Student</button><br>
+                    </form>
+                </div>
+                <div class="formBotRight">                                  <!--Formi kurssin hakemiseen "tietokannasta" id-numeron perusteella-->
+                    <form id="myGetCourseByIdForm">
+                        <label>Search for course by id</label><br>
+                        <input id="crsid" type="number" name="courseId"><br><br>
+                        <button id="getCourseById">Get Course</button><br>
+                    </form>
+                </div>
+                <div>
+                    <ul id="ulLeft">                                        <!--formi vastausdatan listaamiseen-->
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="container2">
+                <div class="formTopLeft2">
+                    <form id="addingCourseToStudentForm">
+                        
+                        <label>Student id</label><br>                           <!--Formi kurssin lisäämiseen oppilaalle (oppilasluokalla on "studentCourses niminen... ")-->
+                        <input id="addcsid" type="number" name="studentId"><br> <!--...lista-elementti oppilaan kurssien tallentamiseen. Jokaisella kurssilla on myös -->
+                        <label>Course id</label><br>                            <!-- vastaavanlainen "courseAttendees"-osallistujalista. Näin jälkikäteen mietittynä -->
+                        <input id="addccid" type="number" name="courseId"><br><br> <!-- näille olisi kannattanut tehdä yhtenäinen rakenne, missä automaattisesti lisätään -->
+                        <button id="addCoursetoStudent">Add Course to a Student</button><br> <!-- oppilas tietylle kurssille, kun tälle oppilaalle lisätään kurssi listalle, -->
+                    </form>                                                     <!-- mutta en kerennyt korjaamaan ohjelman rakennetta oikeen tältä osin. -->
+                </div>
+                <div class="formTopRight2"> 
+                    <form id="addingStudentToCourseForm">
+                        
+                        <label>Course id</label><br>                            <!--Tässä tosiaan lisätään oppilas tietylle kurssille. Molemmilta kysytään id-numerot ja -->
+                        <input id="addscid" type="number" name="courseId"><br>  <!--oppilas lisätään kurssin "courseAttendees"-listalle.-->
+                        <label>Student id</label><br>
+                        <input id="addssid" type="number" name="studentId"><br><br>
+                        <button id="addStudentToACourse">Add a Student to a Course</button>
+                        <br><br>
+                    </form>
+                </div>
+                <div class="formBotLeft2">      
+                    <form id="getStudentsCoursesForm">                          <!--Tällä voidaan hakea tietyn oppilaan kaikki kurssit-->
+                        <label>Get a students courses by student Id</label><br>
+                        <input id="stdsid" type="number" name="studentsId"><br><br>
+                        <button id="getStudentsCourses">Get Courses</button><br>
+                    </form>
+                </div>
+                <div class="formBotRight2">
+                    <form id="getCourseAttendeesForm">                          <!--Tällä voidaan hakea tietyn kurssin kaikki osallistujat-->
+                        <label>Get a courses attendees by course id</label><br>
+                        <input id="crssid" type="number" name="coursesId"><br><br>
+                        <button id="getCourseAttendees">Get Attendees</button><br>
+                    </form>
+                </div>
+                
+                <div>
+                    <ul id="ulRight">                                           <!--formi vastausdatan listaamiseen-->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
